@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import busImage from '../../assets/images/bus.jpg';
-import icon from '../../assets/images/icon.svg';
+import icon from '../../assets/images/newlogo.png';
 
 export default function Login() {
     const [formData, setFormData] = useState({ staffId: '', password: '' });
