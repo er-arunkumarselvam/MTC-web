@@ -165,12 +165,36 @@ button {
 }
 
 /* Scanner */
+.scanner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.scan-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.video-scanner {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid #ccc;
+  display: block;
+}
+
 .hidden {
-  display: none;
+  display: block;
 }
 
 .error {
   color: red;
+  margin-top: 10px;
 }
 
 
