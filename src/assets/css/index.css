@@ -6,6 +6,7 @@
   --white: #fefefe;
   --black: #333;
   --gray: #a3a3a3;
+  --bg-gray:#f2f2f2;
   --green: #22c55e;
   --red: #ef4444;
   --text-gray: #1f2937;
@@ -191,8 +192,13 @@ button {
   font-weight: 600;
   margin-bottom: 20px;
   cursor: pointer;
+  background: var(--btn-black);
+  color: var(--white);
 }
-
+.scan-button:hover{
+  background: var(--btn-gray);
+    color: var(--white);
+}
 .video-scanner {
   width: 100%;
   max-width: 600px;
@@ -205,10 +211,84 @@ button {
 }
 
 .error {
-  color: red;
+  color: var(--red);
   margin-top: 10px;
 }
+/* Form */
+.form-container {
+  height: 100vh;
+}
+.form-header{
+  margin: 25px ;
+}
+.form-details{
+  line-height: 2;
+  margin: 10px 0;
+  background: var(--bg-gray);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+/* Remark Form */
+.remark-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-title{
+  font-weight: 600;
+  text-align: center;
+}
+.remark-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+}
 
+.form-label {
+  grid-row: 1;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-gray);
+}
+
+.form-textarea {
+  grid-row: 2;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid var(--text-ligth-gray);
+  border-radius: 8px;
+  outline: noen;
+  resize: none;
+}
+.info-text{
+  grid-row: 3;
+  text-align: right;
+}
+.form-btn {
+  grid-row: 4;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: var(--btn-black);
+  color: var(--white);  
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.form-btn:hover {
+  background: var(--btn-gray);
+    color: var(--white);
+}
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
@@ -256,8 +336,8 @@ button {
 
   .login__icon,.scanner__icon {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 100px;
+    height: 75px;
     margin: 0 auto;
   }
 
